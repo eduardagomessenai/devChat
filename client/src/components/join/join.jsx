@@ -1,5 +1,6 @@
 import style from "./join.module.css";
 import { Input, Button } from "@mui/material";
+import devLogo from "../../assets/devChatLogo.png";
 
 const join = () => {
   const handleKeyPress = (e) => {
@@ -11,8 +12,8 @@ const join = () => {
   return (
     <>
       <div className={style["dev-logo"]}>
-        DevChat
-        </div>
+        <img src={devLogo} alt="" />
+      </div>
 
       <div className={style["join-container"]}>
         <h2>Bem-vindo ao devChat!</h2>

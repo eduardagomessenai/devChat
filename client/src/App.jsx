@@ -4,14 +4,9 @@ import Chat from "./components/chat/chat";
 import Join from "./components/join/join";
 
 const App = () => {
-const [chatVisibility, setchatVisibility] = useState(true)
+  const [chatVisibility, setchatVisibility] = useState(false);
 
-
-  return (
-    <div className="App">
-{chatVisibility ? <Chat/> : <Join/>}
-    </div>
-  );
+  return <div className="App">{chatVisibility ? <Chat /> : <Join />}</div>;
 };
 
 export default App;
