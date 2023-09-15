@@ -4,9 +4,18 @@ import Chat from "./components/chat/chat";
 import Join from "./components/join/join";
 
 const App = () => {
-  const [chatVisibility, setchatVisibility] = useState(false);
+  const [handShake, setHandShake] = useState(null);
+  const [chatVisibility, setChatVisibility] = useState(false);
 
-  return <div className="App">{chatVisibility ? <Chat /> : <Join />}</div>;
+  return (
+  <div className="App">
+    {chatVisibility ? ( 
+    <Chat /> 
+     ) : ( 
+     <Join state={setChatVisibility} handShake={setHandShake} />
+     )} 
+  </div>
+  );
 };
 
 export default App;
