@@ -2,10 +2,14 @@ import style from "./join.module.css";
 import { Input, Button } from "@mui/material";
 import devLogo from "../../assets/devChatLogo.png";
 import io from "socket.io-client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Join = ({ state, handShake }) => {
   const usernameRef = useRef();
+
+  useEffect(() => {
+    usernameRef.current.focus();
+  });
 
   const handleSubmit = async () => {
     const username = usernameRef.current.value;
